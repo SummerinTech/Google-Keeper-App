@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./Header";
 import CreateArea from "./CreateArea";
-import Note from "./Note";
+// import Note from "./Note";
 import Footer from "./Footer";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 		<div className="App">
 			<Header />
 			<CreateArea />
-			<Note />
+			{/* <Note /> */}
 			<Footer />
 		</div>
 	);
