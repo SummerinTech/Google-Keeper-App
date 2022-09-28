@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CreateArea = () => {
+const CreateArea = ({ onAdd }) => {
 	const [inputArea, setInputArea] = useState({ title: "", content: "" });
 
 	function handleChange(e) {
@@ -12,9 +12,15 @@ const CreateArea = () => {
 			};
 		});
 	}
+
+	function submitInput(e) {
+		e.preventDefault();
+		onAdd(inputArea);
+		setInputArea({ title: "", content: "" });
+	}
 	return (
 		<div>
-			<form>
+			<form onSubmit={submitInput}>
 				<input
 					value={inputArea.title}
 					onChange={handleChange}
